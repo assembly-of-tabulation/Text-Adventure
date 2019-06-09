@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Text Fortress</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body> 
+
+	<div class="side-A">
+		<h1>Fortress Adventure</h1>
+		<div id='location'>
+			<img id="room-img" src="placeholder-img.png" width="400" height="400">
+		</div>
+		<div class="text"></div>
+	</div>
+
+	<div class="side-B">
+
+		<div class="pics"></div>
+		<div class="inventory box">
+			<h4>Inventory</h4>
+			<ul>
+				<li>torch</li>
+				<li>clown costume</li>
+				<li>rope</li>
+				<li>chloroform</li>
+				<li>zip-ties</li>
+			</ul>
+		</div>
+		<div id="command-list" class="box">
+			<h4>Command List:</h4>
+			<ul>
+				<li>torch</li>
+				<li>door</li>
+				<li>cast</li>
+				<li>attack</li>
+				<li>inspect</li>
+				<li>take</li>
+			</ul>
+		</div>
+		<form>
+			<input id="command-input" type="text" name="text-input" placeholder="COMMAND...">
+			<input type="submit" name="submit-command" value="Enter">
+		</form>
+	</div>
+
+
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
