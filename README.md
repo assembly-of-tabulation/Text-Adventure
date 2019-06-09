@@ -13,7 +13,7 @@ Text Adventure Game.
 - [ ] **RUN** `yarn start` or `npm start` to fire up your React application. 
 
 
-## Git Push to master Branch
+## Git Push to Master Branch
 
 - [ ] **RUN** `git add .`
 - [ ] **RUN** `git commit -m"The Commit"`
