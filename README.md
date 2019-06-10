@@ -27,8 +27,19 @@ Finished project includes all of the following requirements:
   - [ ] Add basic HTML structure.
   - [ ] Add basic CSS styling.
   - [ ] Add basic Javascript functionality. 
+    - [ ] Text Input & commands
+      - [ ] Add onchange for text input.
+      - [ ] Add command list object for text input.
+      - [ ] Wire up onchange to command list object.
+    - [ ] Add text content object.
+
+- [ ] Enchounter 
+  - [ ] Add basic HTML structure.
+  - [ ] Add basic CSS styling.
+  - [ ] Add basic Javascript functionality. 
     - [ ] Add onchange for text input.
     - [ ] Add command list object for text input.
+    - [ ] Wire up onchange to command list object.
 
 ## STRETCH 
 
