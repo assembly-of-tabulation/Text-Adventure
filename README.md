@@ -24,11 +24,11 @@ Text Adventure Game.
 Finished project includes all of the following requirements:
 
 - [ ] Main Menu // Landing Page
-  - [ ] HTML
-  - [ ] CSS
-  - [ ] Javascript
-  
-- [ ] 
+  - [ ] Add basic HTML structure.
+  - [ ] Add basic CSS styling.
+  - [ ] Add basic Javascript functionality. 
+    - [ ] Add onchange for text input.
+    - [ ] Add command list object for text input.
 
 ## STRETCH 
 
