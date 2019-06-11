@@ -1,4 +1,4 @@
-var scenario = {
+let scenario = {
   one: {
     image: "placeholder-img.png",
     text: "Placeholder string - Scenario Two: Intro",

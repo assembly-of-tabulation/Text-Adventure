@@ -1,8 +1,8 @@
-var locationImages = document.getElementById("location-img"); 
-var contentText = document.getElementById("contentText"); 
-var buttonContainer = document.getElementById('buttonContainer');
-var nameInput = document.getElementById('nameInput');
-var userName;
+let locationImages = document.getElementById("location-img"); 
+let contentText = document.getElementById("contentText"); 
+let buttonContainer = document.getElementById('buttonContainer');
+let nameInput = document.getElementById('nameInput');
+let userName;
 
 nameInput.onkeypress = (event) => {
   console.log(nameInput.value);
@@ -13,22 +13,22 @@ nameInput.onkeypress = (event) => {
   }
 };
 
-var changeText = (words) => {
-  contentText.innerHTML = words.replace("Your name", userName);
+let changeText = (words) => {
+  contentText.innerHTML = words.replace("your name", userName);
 };
 
-var changeImage = (img) => {
+let changeImage = (img) => {
   locationImages.style.backgroundImage = "url(" + img + ")";
 };
 
-var changeButtons = (buttonList) => {
+let changeButtons = (buttonList) => {
   buttonContainer.innerHTML = "";
   for (var i = 0; i < buttonList.length; i++) {
     buttonContainer.innerHTML += "<button onClick="+buttonList[i][1]+">" + buttonList[i][0] + "</button>";
   };
 };
 
-var advanceTo = (scenario) => {
+let advanceTo = (scenario) => {
   changeImage(scenario.image)
   changeText(scenario.text)
   changeButtons(scenario.buttons)
