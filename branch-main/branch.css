@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+} 
+
+html {
+  font-size: 12px; /*62.5%; */
+}
+ 
+ body {
+ 	display: flex;
+	color: white;
+	background-color: #262817;
+	margin-left: 2%;
+}
+
+/*######    EXPERIMENTAL DESIGN STYLES    ########*/
+
+/*     cream #F9FFCE , desaturated cyan #689689 , raisin black #262817 , dark moss green #4F5D2F , smoke #7D7E75     */
+
+.container h1 {
+	font-size: 2rem;
+}
+.box, h1, h2, h3, h4, p, ul, li{
+	background-color: #564946;
+}
+.box {
+	font-family: sans-serif;
+	display: inline-block;
+	text-align: left;
+	border: solid 3px #689689;
+	border-radius: 5px;
+	padding: 5px 5px;
+}
+.btn {
+	position: relative;
+	background-color: #689689;
+	border: none;
+	border-bottom: solid 5px #564946;
+	border-radius: .5rem;
+	letter-spacing: 1px;
+	color:  #C8EDB1;
+	font-weight: 700;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.btn:active {
+	border: none;
+	bottom: -5px;
+	color: #F9FFCE;
+}
+.btn:focus {
+	outline: none;
+}
+/*######    ---------#######----------    ########*/
+
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto; 
+}
+
+.contentContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+h1 {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 5rem;
+	text-align: center;
+}
+
+h4 {
+	margin: 0;
+	padding: 0 5px;
+}
+
+.side-A {
+	width: 100%;
+	border: solid 1px green;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.side-B {
+	width: 100%;
+	border: solid 1px green;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#location {
+	display: flex;
+	flex-direction: column;
+	padding: 0.1%;
+}
+
+#location h2 {
+	width: 400px;
+	text-align: center;
+}
+
+#location-img {
+	height: 300px;
+	width: 300px;
+
+	border: solid 2px lightgrey;
+	border-radius: 5px;
+}
+
+#content-text {
+	/*font-size: 1.5rem;*/
+}
+
+.message {
+	padding: 5px;
+}
+
+
+
+/*######     INVENTORY - MENU     #######*/
+
+.tabs {
+	overflow: hidden;
+}
+.tabs button {
+	cursor: pointer;
+	transition: 0.5s;
+}
+/*.tabs button:hover {
+	background-color: lightblue;
+}*/
+.tab button.active {
+	background-color: dodgerblue;
+}
+.tab-content {
+	display: none;
+
+	width: 100%;
+	background-color: #564946;
+	font-family: sans-serif;
+	text-align: left;
+	border: solid 3px #689689;
+	border-radius: 5px;
+	padding: 5px 5px;
+}
+.tab-content li {
+	list-style: none;
+	margin: 3px 0;
+}
+
+.tab-content.current{
+	display: block;
+}
+
+/*######     -------END-------     #######*/
+
+
+
+
+form {
+	
+}
+
+.text-button-container {
+	display: flex;
+  	flex-direction: column;
+	align-items: center;
+  	margin-top: 10px;
+}
+
+.scene-text-container {
+	position: relative;
+}
+
+#content-text {
+	font-size: 1.25rem;
+	line-height: 1.6rem;
+	padding: 1rem;
+}
+#continue-text-btn{
+	position: absolute;
+	bottom: -10px;
+	right: 0;
+}
+
+
+#nameInput {
+  width: 75%;
+  height: 25px;
+  text-align:center;
+  font-size: 2rem;
+	margin-top:15px;
+	border-radius: 3px;
+}
+
+#buttonContainer {
+  text-align:center;
+}
+
+button{
+  margin-left: 10px;
+  margin-top: 15px;
+  font-size: 14px;
+}
