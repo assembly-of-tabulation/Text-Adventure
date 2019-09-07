@@ -35,4 +35,4 @@ const enemy = [
   }
 ]
 
-console.log(`Health: ${enemy[1].currentHealth}`);
+console.log(`Health: ${enemy[1].currentHealth}`); // Test

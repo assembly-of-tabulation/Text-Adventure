@@ -33,4 +33,4 @@ const player = [
   {
     dead: false
   }
-]
+] //Test

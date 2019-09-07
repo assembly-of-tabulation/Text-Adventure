@@ -74,4 +74,4 @@ function playerAttack() {
     console.log(enemy[7]);
     return document.querySelector(".healthBar").style.display = "none";
   }
-}
+} //test

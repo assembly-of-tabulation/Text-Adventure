@@ -31,4 +31,4 @@ let scenario = {
     image: "placeholder-img.png",
     text: "Placeholder string - Scenario Five: End",
   },
-};
+}; // Test
