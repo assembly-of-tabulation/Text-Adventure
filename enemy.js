@@ -19,7 +19,7 @@ const enemy = [
   {
     damageRoll: function(min, max) {
       min = Math.ceil(1);
-      max = Math.floor(12);
+      max = Math.floor(8);
       let damageRollResult = Math.floor(Math.random() * (max - min)) + min;
       return damageRollResult;
     },
