@@ -7,7 +7,7 @@ const Inventory = {
 		potions: {
 			"Health Potion": 2,
 			"Godly Status": 1,
-			" Divine Staff of Vanilla JavaScript": 1
+			"Divine Staff of Vanilla JavaScript": 1
 		},
 
 		scrolls: {}, 
