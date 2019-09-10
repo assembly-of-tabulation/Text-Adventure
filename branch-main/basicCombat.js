@@ -96,25 +96,25 @@ const TestPlayer = {
 
 	}, // End menu_attacks Obj
 
-	inventory: {
-		torch: {
-			name: 'Torch',
-			count: 2 },
+	// inventory: {
+	// 	torch: {
+	// 		name: 'Torch',
+	// 		count: 2 },
 
-		short_sword: {
-			name: 'Short Sword',
-			count: 1 },
+	// 	short_sword: {
+	// 		name: 'Short Sword',
+	// 		count: 1 },
 
-		throwing_knives: {
-			name: 'Throwing Knives',
-			count: 3 },
+	// 	throwing_knives: {
+	// 		name: 'Throwing Knives',
+	// 		count: 3 },
 
-		potion: {
-			name: 'Healing Potion',
-			count: 2 }
+	// 	potion: {
+	// 		name: 'Healing Potion',
+	// 		count: 2 }
 
 
-	},
+	// },
 
 	// --METHODS FOR HANDLING PLAYER--
 
@@ -271,14 +271,51 @@ const Controller = (function(dataCtrl, UICtrl) {
 	}
 
 
+	const fillMenuList = function () {
+
+		// Get <ul> by id; items, equipment
+		const menuItemsUL = document.getElementById('items');
+		const menuEquipmentUL = document.getElementById('equipment');
+		console.log(menuItemsUL);
+
+
+		// Get Inventory.items.potions object
+		const inventoryItemsPotionsList = Inventory.items.potions;
+		console.log(Object.keys(inventoryItemsPotionsList));
+
+
+		// Acts like jQuery's  empty() method
+		while (menuItemsUL.firstChild) {
+			menuItemsUL.removeChild(menuItemsUL.firstChild);
+		}
+
+
+		// iterating through object keys and values
+		for (let [key, value] of Object.entries(inventoryItemsPotionsList)) {
+			console.log( `${key} : ${value}` );
+
+			// Create <li> element
+			let element_li = document.createElement('li');
+
+			// Create textNode
+			let text = document.createTextNode(`${key}: ${value}`);
+
+			// Add text to li element
+			element_li.appendChild(text);
+
+			// Append li to menu
+			menuItemsUL.appendChild(element_li);
+		}
+	};
+
+	fillMenuList();
+
+
+
 
 	return {
 		init: function() {
 			setupEventListeners();
-		},
-
-		test_1: function() {
-			UICtrl.publicTest();
 		},
 
 		change_location_image: function() {
