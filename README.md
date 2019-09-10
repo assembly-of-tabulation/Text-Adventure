@@ -31,7 +31,7 @@ Finished project includes all of the following requirements:
       - [ ] Add onchange for text input.
       - [ ] Add command list object for text input.
       - [ ] Wire up onchange to command list object.
-    - [ ] Add text content object.
+    - [ ] Add text content object. 
 
 - [ ] Enchounter 
   - [ ] Add basic HTML structure.

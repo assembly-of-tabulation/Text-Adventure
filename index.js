@@ -35,3 +35,43 @@ let advanceTo = (scenario) => {
 };
 
 advanceTo(scenario.one);
+
+function playerAttack() {
+
+  player[3].attackResult.push(player[2].attackRoll());
+  player[3].attackResult.shift();
+  console.log(`Attack Roll Result: ${player[3].attackResult}`);
+  if (enemy[1].currentHealth >= 0) {
+    if (player[3].attackResult >= enemy[6].defense[0]) {
+      console.log("Attack Succeeded!")
+      player[5].damageResult.push(+ player[4].damageRoll());
+      player[5].damageResult.shift();
+
+      enemy[1].currentHealth.push(enemy[1].currentHealth[0] - player[5].damageResult[0]);
+      enemy[1].currentHealth.shift();
+      
+      console.log(`Damage Roll Result: ${player[5].damageResult}`);
+      console.log(`Current Health: ${enemy[1].currentHealth}`);
+
+      let reduceHealthBar = enemy[1].currentHealth / 240 * 100;
+      console.log(reduceHealthBar);
+      if (enemy[1].currentHealth > 0) {
+        return document.querySelector(".healthBar").style.width = `${reduceHealthBar}%`;
+      } else {
+        enemy[1].currentHealth = 0;
+        enemy[7].dead = true;
+        console.log(enemy[1].currentHealth);
+        console.log(enemy[7]);
+        return document.querySelector(".healthBar").style.display = "none";
+      }
+    } else {
+        console.log("Attack failed!")
+    }
+  } else {
+    enemy[1].currentHealth = 0;
+    enemy[7].dead = true;
+    console.log(enemy[1].currentHealth);
+    console.log(enemy[7]);
+    return document.querySelector(".healthBar").style.display = "none";
+  }
+} //test

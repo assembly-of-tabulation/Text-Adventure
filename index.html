@@ -37,39 +37,52 @@
 						<li>zip-ties</li>
 					</ul>
 				</div>
-				<div id="command-list" class="box">
-					<h4>Command List:</h4>
-					<ul>
-						<li>torch</li>
-						<li>door</li>
-						<li>cast</li>
-						<li>attack</li>
-						<li>inspect</li>
-						<li>take</li>
-					</ul>
-				</div>
-				<form>
+				<div>
 					<input id="command-input" type="text" name="text-input" placeholder="COMMAND...">
 					<input type="submit" name="submit-command" value="Enter">
-				</form>
+					<!-- <div class="attackContainer">
+							<button class="attackButton" onclick="attack()"> 
+								Attack 
+							</button>
+						</div> -->
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="text-button-container">
-			<div 
-				id="contentText">
+			<div class="text-button-container">
+				<div 
+					id="contentText">
+				</div>
+				<input 
+					id="nameInput" 
+					onkeydown='submitName(this)' 
+					placeholder='Name'
+				>
 			</div>
-			<input 
-				id="nameInput" 
-				onkeydown='submitName(this)' 
-				placeholder='Name'
-			>
-			<div 
-				id="buttonContainer">
+			<div class="combatContainer">
+					<input 
+						type="submit" 
+						name="submit-command" 
+						value="Enter" 
+						class="attackButton" 
+						onclick="playerAttack()" 
+						placeholder="Attack"
+					>
+				<div class="healthContainer">
+					<div 
+						class="healthBar">
+					</div>
+					<div 
+						class="healthBarBackground">
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="scenarios.js"></script>
 	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="enemy.js"></script>
+	<script type="text/javascript" src="player.js"></script>
 </body>
-</html>
+<div></div>
+</html> 
