@@ -1,0 +1,185 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Text Fortress</title>
+	<link rel="stylesheet" type="text/css" href="branch.css">
+</head>
+<body> 
+
+	<main class="container">
+		<h1>
+				Fortress Adventure
+		</h1>
+
+		<div class="contentContainer">
+
+			<section class="side-A">
+
+				<div id='location'>
+					<img id="location-img" src="../img/front-door.png">
+				</div>
+
+				<div class="scene-text-container">
+					<p id="content-text" class="box"></p>
+					<button id="continue-text-btn" class="btn">Continue</button>
+				</div>
+			</section>
+
+			<section class="side-B">
+
+				<form id="command-form">
+					<input id="command-input" type="text" name="text-input" placeholder="COMMAND...">
+					<input id="submit" class="btn" type="submit" name="submit-command" value="Enter">
+				</form>
+
+
+				<!-- TAB-LINK CONTAINER -->
+				<div class="tabs">
+					<button class="tablinks" onclick="handleTabSwitch('inventory', 0)">Inventory</button>
+					<button class="tablinks" onclick="handleTabSwitch('equipment', 1)">Equipment</button>
+					<button class="tablinks" onclick="handleTabSwitch('commands', 2)">Command-List</button>
+				</div>
+
+
+
+
+				<!--######     TAB CONTENT    ######-->
+
+				<!-- Inventory Content -->
+				<div class="tab-content">
+					<h3>Inventory</h3>
+					<ul id="items">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Equipment Content -->
+				<div class="tab-content">
+					<h3>Equipment</h3>
+					<ul id="equipment">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Command-List Content -->
+				<div class="tab-content">
+					<h3>Command-List</h3>
+					<ul>
+						
+						
+					</ul>
+				</div>
+
+				<!--######    END-- TAB CONTENT    ######-->
+
+
+
+
+
+				<!-- <div 
+					class="pics">
+				</div>
+				<div class="inventory box">
+					<h4>Inventory</h4>
+					<ul>
+						<li>torch</li>
+						<li>clown costume</li>
+						<li>rope</li>
+						<li>chloroform</li>
+						<li>zip-ties</li>
+					</ul>
+				</div>
+				<div id="command-list" class="box">
+					<h4>Command List:</h4>
+					<ul>
+						<li>torch</li>
+						<li>door</li>
+						<li>cast</li>
+						<li>attack</li>
+						<li>inspect</li>
+						<li>take</li>
+					</ul>
+				</div> -->
+				
+			</section>
+		</div>
+
+
+		<!-- <div class="text-button-container">
+			<div 
+				id="contentText">
+			</div>
+			<input 
+				id="nameInput" 
+				onkeydown='submitName(this)' 
+				placeholder='Name'
+			>
+			<div 
+				id="buttonContainer">
+			</div>
+		</div> -->
+
+	</main>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="../inventory.js"></script>
+	<script type="text/javascript" src="basicCombat.js"></script>
+
+
+
+
+
+
+	<!--######    CAUTION! -- Thrown-Together TABBED-MENU SCRIPT    ######-->
+	<script type="text/javascript">
+		
+		//tabs, tabs button, tab-content, .active
+	const handleTabSwitch = function(list, id) {
+
+		//get tabs Array
+		const tabList = document.querySelectorAll('.tabs');
+		const tabArray = Array.from(tabList);
+
+		//get tab-content ?
+		const contentList = document.querySelectorAll('.tab-content');
+		const contentArray = Array.from(contentList);
+
+		//current active index
+		let curIndex = id; // current Index
+
+		
+		if (list === 'inventory') {
+			
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'equipment') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'commands') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+
+		console.log('button clicked!')
+	}
+
+	</script>
+</body>
+</html>
