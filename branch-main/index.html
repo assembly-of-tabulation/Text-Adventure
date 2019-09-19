@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -39,7 +39,8 @@
 				<div class="tabs">
 					<button class="tablinks" onclick="handleTabSwitch('inventory', 0)">Inventory</button>
 					<button class="tablinks" onclick="handleTabSwitch('equipment', 1)">Equipment</button>
-					<button class="tablinks" onclick="handleTabSwitch('commands', 2)">Command-List</button>
+					<button class="tablinks" onclick="handleTabSwitch('readied', 2)">Ready</button>
+					<button class="tablinks" onclick="handleTabSwitch('commands', 3)">Command-List</button>
 				</div>
 
 
@@ -61,6 +62,16 @@
 				<div class="tab-content">
 					<h3>Equipment</h3>
 					<ul id="equipment">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Readied Content -->
+				<div class="tab-content">
+					<h3>Readied Equipment</h3>
+					<ul id="ready">
 						
 
 					</ul>
@@ -163,6 +174,13 @@
 			contentArray[curIndex].classList.add('current');
 		}
 		else if (list === 'equipment') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'readied') {
 
 			for (let i = 0; i < contentArray.length; i++) {
 				contentArray[i].classList.remove('current');

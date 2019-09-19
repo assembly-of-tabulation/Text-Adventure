@@ -1,13 +1,11 @@
-
+ 
 
 const Inventory = {
 
 	items: {
 
 		potions: {
-			"Health Potion": 2,
-			"Godly Status": 1,
-			"Divine Staff of Vanilla JavaScript": 1
+			"Health Potion": 2
 		},
 
 		scrolls: {}, 
@@ -36,7 +34,7 @@ const Inventory = {
 
 	},
 
-	readyEquipment: {
+	ready: {
 
 		weapons: {
 			"Short Sword": 1
