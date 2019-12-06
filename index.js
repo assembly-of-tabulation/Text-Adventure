@@ -1,4 +1,4 @@
-let locationImages = document.getElementById("location-img"); 
+let locationImages = document.getElementById("location-img");  
 let contentText = document.getElementById("contentText"); 
 let buttonContainer = document.getElementById('buttonContainer');
 let nameInput = document.getElementById('nameInput');

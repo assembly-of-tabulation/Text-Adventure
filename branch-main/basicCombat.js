@@ -1,49 +1,19 @@
- 
+  
 
-// #####################     Dont Use hypotheticalPlayer - GLOBAL   ##################################
 
-let hypotheticalPlayer = {
-	level: 1,
 
-	health: {
-		health_total: 100,
-		health_current: 100 },
 
-	armorClass: 10,
+// ########################################################
+// DONT REMOVE OR YOU WILL BREAK THE ENTIRE CODEBASE!!!!
 
-	stats_character: [
-		{str: 10 },
-		{dex: 10 },
-		{con: 14 },
-		{cha: 126},
-		{int: 8  },
-		{wis: 14 }
-	],
 
-	menu_attack: [
-		{
-			shortSword: {
-				bonus: 0,
-				damageDie: 4}
-		}, // End shortSword
+log = function(a){
+	console.log(a);
+};
 
-		{
-			longSpear: {
-				bonus: 1,
-				damageDie: 6}
-		} // End longSpear
-	], // End Array - stats__attack 
+// ########################################################
 
-	methods: {
-		// HIT ROLL: 		calculate hit rolls success
-		// DAMAGE ROLL: 	calculate damage dealt to monster
-		// TAKE DAMAGE:	reduce current health
-		// HEAL: increase current health
-		// ADD ATTACK METHOD: stats__attack --i.e. throwingKnives: {bonus: -1, damageDie: 3}
-		
-	} 
 
-} // End Object - player
 
 // ##############################################################################
 // -------------------      DATA / SCENE OBJ     --------------------------------
@@ -62,8 +32,6 @@ const DataController = (function() {
 	const scene = {
 
 	}
-
-
 
 })();
 
@@ -95,26 +63,6 @@ const TestPlayer = {
 			attack_die: 4 }
 
 	}, // End menu_attacks Obj
-
-	inventory: {
-		torch: {
-			name: 'Torch',
-			count: 2 },
-
-		short_sword: {
-			name: 'Short Sword',
-			count: 1 },
-
-		throwing_knives: {
-			name: 'Throwing Knives',
-			count: 3 },
-
-		potion: {
-			name: 'Healing Potion',
-			count: 2 }
-
-
-	},
 
 	// --METHODS FOR HANDLING PLAYER--
 
@@ -202,7 +150,7 @@ function Monster(name, maxHealth, AC, attackDie, maxTreasure, exp) {
 }
 
 
-	
+
 
 	
 
@@ -271,14 +219,111 @@ const Controller = (function(dataCtrl, UICtrl) {
 	}
 
 
+	// const fillMenuList = function(listName) {
+
+	// 	// Get <ul> by id; items, equipment
+	// 	const menuItemsUL = document.getElementById('items');
+	// 	const menuEquipmentUL = document.getElementById('equipment');
+	// 	console.log(menuItemsUL);
+
+
+	// 	// Get Inventory.items.potions object
+	// 	const inventoryItemsPotionsList = Inventory.items.potions;
+	// 	console.log(Object.keys(inventoryItemsPotionsList));
+
+
+	// 	// Acts like jQuery's  empty() method
+	// 	while (menuItemsUL.firstChild) {
+	// 		menuItemsUL.removeChild(menuItemsUL.firstChild);
+	// 	}
+
+
+	// 	// iterating through object keys and values
+	// 	for (let [key, value] of Object.entries(inventoryItemsPotionsList)) {
+	// 		console.log( `${key} : ${value}` );
+
+	// 		// Create <li> element
+	// 		let element_li = document.createElement('li');
+
+	// 		// Create textNode
+	// 		let text = document.createTextNode(`${key}: ${value}`);
+
+	// 		// Add text to li element
+	// 		element_li.appendChild(text);
+
+	// 		// Append li to menu
+	// 		menuItemsUL.appendChild(element_li);
+	// 	}
+	// };
+
+
+
+
+	// Copy function
+	const initMenuList = function(type) {  // items, equipment, or readied
+
+		// get menu-type associated <ul> by ID
+		// get item-types into array
+		// loop through item-types and empty lists
+		// repopulate item-types lists one at a time
+
+
+
+		// Get <ul> by id; items, equipment, or readied
+		const menuTypeUL = document.getElementById(type);
+		console.log(menuTypeUL);
+
+
+		// get item-types into array
+		const itemTypeArray = Object.keys(Inventory[type]);
+		log('Item Type Array : ' + itemTypeArray);
+
+
+		// loop through item-types 
+		for (let i = 0; i < itemTypeArray.length; i++) {
+			log(Inventory[type][itemTypeArray[i]]);
+
+			// iterating through object keys and values
+			for (let [key, value] of Object.entries(Inventory[type][itemTypeArray[i]])) {
+				console.log( `${key} : ${value}` );
+
+				// Create <li> element
+				let element_li = document.createElement('li');
+
+				// Create textNode
+				let text = document.createTextNode(`${key}: ${value}`);
+
+				// Add text to li element
+				element_li.appendChild(text);
+
+				// Append li to menu
+				menuTypeUL.appendChild(element_li);
+			}
+		}
+
+
+		// Get Inventory.items.potions object
+			// const inventoryItemsPotionsList = Inventory.items.potions;
+			// console.log(Object.keys(inventoryItemsPotionsList));
+
+
+		// Acts like jQuery's  empty() method
+			// while (menuTypeUL.firstChild) {
+			// 	menuTypeUL.removeChild(menuTypeUL.firstChild);
+			// }
+
+	};
+
+	initMenuList('items');
+	initMenuList('equipment');
+	initMenuList('ready');
+
+
+
 
 	return {
 		init: function() {
 			setupEventListeners();
-		},
-
-		test_1: function() {
-			UICtrl.publicTest();
 		},
 
 		change_location_image: function() {

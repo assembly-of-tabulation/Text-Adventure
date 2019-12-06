@@ -1,10 +1,12 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Text Fortress</title>
-	<link rel="stylesheet" type="text/css" href="branch.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="./branch.css">
 </head>
 <body> 
 
@@ -39,7 +41,8 @@
 				<div class="tabs">
 					<button class="tablinks" onclick="handleTabSwitch('inventory', 0)">Inventory</button>
 					<button class="tablinks" onclick="handleTabSwitch('equipment', 1)">Equipment</button>
-					<button class="tablinks" onclick="handleTabSwitch('commands', 2)">Command-List</button>
+					<button class="tablinks" onclick="handleTabSwitch('readied', 2)">Ready</button>
+					<button class="tablinks" onclick="handleTabSwitch('commands', 3)">Command-List</button>
 				</div>
 
 
@@ -50,8 +53,9 @@
 				<!-- Inventory Content -->
 				<div class="tab-content">
 					<h3>Inventory</h3>
-					<ul>
-						<li>Torch</li>
+					<ul id="items">
+						
+
 					</ul>
 				</div>
 
@@ -59,8 +63,19 @@
 				<!-- Equipment Content -->
 				<div class="tab-content">
 					<h3>Equipment</h3>
-					<ul>
-						<li>Short Sword</li>
+					<ul id="equipment">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Readied Content -->
+				<div class="tab-content">
+					<h3>Readied Equipment</h3>
+					<ul id="ready">
+						
+
 					</ul>
 				</div>
 
@@ -69,12 +84,7 @@
 				<div class="tab-content">
 					<h3>Command-List</h3>
 					<ul>
-						<li>torch</li>
-						<li>inspect</li>
-						<li>open</li>
-						<li>move</li>
-						<li>use</li>
-						<li>take</li>
+						
 						
 					</ul>
 				</div>
@@ -132,6 +142,7 @@
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	
+	<script type="text/javascript" src="../inventory.js"></script>
 	<script type="text/javascript" src="basicCombat.js"></script>
 
 
@@ -165,6 +176,13 @@
 			contentArray[curIndex].classList.add('current');
 		}
 		else if (list === 'equipment') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'readied') {
 
 			for (let i = 0; i < contentArray.length; i++) {
 				contentArray[i].classList.remove('current');
