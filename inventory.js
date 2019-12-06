@@ -1,6 +1,6 @@
  
 
-const Inventory = {
+var Inventory = {
 
 	items: {
 
@@ -11,7 +11,8 @@ const Inventory = {
 		scrolls: {}, 
 
 		keys: {
-			"Bronze Key": 1
+			"Bronze Key": 1,
+			"Master Key": 5
 		}
 
 
@@ -50,5 +51,6 @@ const Inventory = {
 	}
 
 
-
 }
+
+localStorage.setItem('Inventory', JSON.stringify(Inventory));

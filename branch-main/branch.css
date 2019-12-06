@@ -9,7 +9,7 @@ html {
  body {
  	display: flex;
 	color: white;
-	background-color: #262817;
+	background-color: #111;
 	margin-left: 2%;
 }
 
@@ -21,26 +21,27 @@ html {
 	font-size: 2rem;
 }
 .box, h1, h2, h3, h4, p, ul, li{
-	background-color: #564946;
+	/* background-color: #edeede; */
 }
 .box {
 	font-family: sans-serif;
 	display: inline-block;
 	text-align: left;
-	border: solid 3px #689689;
+	border: solid 1px silver;
 	border-radius: 5px;
+	margin: 20px;
 	padding: 5px 5px;
 }
 .btn {
 	position: relative;
-	background-color: #689689;
+	/* background-color: #689689; */
 	border: none;
 	border-bottom: solid 5px #564946;
 	border-radius: .5rem;
 	letter-spacing: 1px;
-	color:  #C8EDB1;
+	color:  silver;
 	font-weight: 700;
-	padding: 5px;
+	padding: 3px;
 	margin-bottom: 10px;
 }
 .btn:active {
@@ -51,8 +52,6 @@ html {
 .btn:focus {
 	outline: none;
 }
-/*######    ---------#######----------    ########*/
-
 
 
 .container {
@@ -84,7 +83,8 @@ h4 {
 
 .side-A {
 	width: 100%;
-	border: solid 1px green;
+	border: solid 1px silver;
+	border-radius: 3px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -94,7 +94,8 @@ h4 {
 
 .side-B {
 	width: 100%;
-	border: solid 1px green;
+	border: solid 1px silver;
+	border-radius: 3px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -115,7 +116,7 @@ h4 {
 #location-img {
 	height: 300px;
 	width: 300px;
-
+	margin-top: 20px;
 	border: solid 2px lightgrey;
 	border-radius: 5px;
 }
@@ -127,11 +128,9 @@ h4 {
 .message {
 	padding: 5px;
 }
-
-
-
-/*######     INVENTORY - MENU     #######*/
-
+/* ########################################## */
+/*######        INVENTORY - MENU       #######*/
+/* ########################################## */
 .tabs {
 	overflow: hidden;
 }
@@ -149,12 +148,11 @@ h4 {
 	display: none;
 
 	width: 100%;
-	background-color: #564946;
 	font-family: sans-serif;
 	text-align: left;
-	border: solid 3px #689689;
+	border-top: solid 1px silver;
 	border-radius: 5px;
-	padding: 5px 5px;
+	padding: 5px 20px;
 }
 .tab-content li {
 	list-style: none;
@@ -171,7 +169,7 @@ h4 {
 
 
 form {
-	
+	margin: 0;
 }
 
 .text-button-container {
@@ -195,8 +193,10 @@ form {
 	bottom: -10px;
 	right: 0;
 }
-
-
+#command-input {
+	background-color: silver;
+	margin: 20px;
+}
 #nameInput {
   width: 75%;
   height: 25px;
@@ -205,13 +205,12 @@ form {
 	margin-top:15px;
 	border-radius: 3px;
 }
-
 #buttonContainer {
   text-align:center;
 }
-
 button{
   margin-left: 10px;
   margin-top: 15px;
   font-size: 14px;
+  color: silver;
 }

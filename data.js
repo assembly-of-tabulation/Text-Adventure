@@ -1,7 +1,7 @@
 let scenario = {
   one: {
     image: "placeholder-img.png",
-    text: "Placeholder string - Scenario Two: Intro",
+    text: "Enter your name, unfortunate hero.",
   },
   two: {
     image: "placeholder-img.png",

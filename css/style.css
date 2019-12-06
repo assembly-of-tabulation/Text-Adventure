@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+} 
+
+html {
+  font-size: 62.5%;
+}
+ 
+ body {
+ 	display: flex;
+	color: white;
+	background-color: black;
+	margin-left: 2%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto; 
+}
+
+.contentContainer {
+	display: flex;
+	width: 100%;
+}
+
+h1 {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 5rem;
+	text-align: center;
+}
+
+h4 {
+	margin: 0;
+	padding: 0 5px;
+}
+
+.side-A {
+	width: 50%;
+	border: solid 1px green;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.side-B {
+	width: 50%;
+	border: solid 1px green;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#location {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 0.1%;
+}
+
+#location h2 {
+	width: 400px;
+	text-align: center;
+}
+
+#location-img {
+	width: 100%;
+	border: solid 2px lightgrey;
+	border-radius: 5px;
+}
+
+.message {
+	padding: 5px;
+}
+
+.command-lit {
+	
+}
+
+.inventory {
+	
+}
+
+form {
+	
+}
+
+.box {
+	font-family: sans-serif;
+	display: inline-block;
+	text-align: left;
+	border: solid 3px white;
+	border-radius: 5px;
+	padding: 5px 5px;
+}
+
+.text-button-container {
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+  margin-top: 10px;
+}
+
+#contentText {
+	font-size: 2rem;
+}
+
+#nameInput {
+  width: 75%;
+  height: 25px;
+  text-align:center;
+  font-size: 2rem;
+	margin-top:15px;
+	border-radius: 3px;
+}
+
+#buttonContainer {
+  text-align:center;
+}
+
+button{
+  margin-left: 10px;
+  margin-top: 15px;
+  height: 22px;
+  font-size: 14px;
+}

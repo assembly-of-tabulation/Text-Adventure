@@ -24,8 +24,8 @@ Text Adventure Game.
 Finished project includes all of the following requirements:
 
 - [ ] Main Menu // Landing Page
-  - [ ] Add basic HTML structure.
-  - [ ] Add basic CSS styling.
+  - [x] Add basic HTML structure.
+  - [x] Add basic CSS styling.
   - [ ] Add basic Javascript functionality. 
     - [ ] Text Input & commands
       - [ ] Add onchange for text input.
@@ -33,7 +33,7 @@ Finished project includes all of the following requirements:
       - [ ] Wire up onchange to command list object.
     - [ ] Add text content object.
 
-- [ ] Enchounter 
+- [ ] Encounter 
   - [ ] Add basic HTML structure.
   - [ ] Add basic CSS styling.
   - [ ] Add basic Javascript functionality. 
@@ -41,6 +41,4 @@ Finished project includes all of the following requirements:
     - [ ] Add command list object for text input.
     - [ ] Wire up onchange to command list object.
 
-## STRETCH 
 
-- [ ] 

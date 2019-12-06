@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<title>Text Fortress</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body> 
 	<div class="container">
@@ -60,7 +62,7 @@
 			</div>
 			<input 
 				id="nameInput" 
-				onkeydown='submitName(this)' 
+				onkeypress='submitName(this)' 
 				placeholder='Name'
 			>
 			<div 
