@@ -1,32 +1,101 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Text Fortress</title>
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="./css/skeleton.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body> 
-	<div class="container">
+
+	<main class="container">
 		<h1>
 				Fortress Adventure
 		</h1>
+
 		<div class="contentContainer">
-			<div class="side-A">
+
+			<section class="side-A">
+
 				<div id='location'>
-					<img 
-						id="location-img" 
-						src="placeholder-img.png" 
-						width="400" 
-						height="400"
-					>
+					<img id="room-image" src="../img/front-door.png">
 				</div>
-				<div 
-					class="text">
+
+				<div class="scene-text-container">
+					<p id="text-box" class="box"></p>
+					<button id="continue-text-btn">Continue</button>
 				</div>
-			</div>
-			<div class="side-B">
-				<div 
+			</section>
+
+			<section class="side-B">
+
+				<form id="command-form">
+					<input id="command-input" type="text" name="text-input" placeholder="COMMAND...">
+					<input id="submit" class="btn" type="submit" name="submit-command" value="Enter">
+				</form>
+
+
+				<!-- TAB-LINK CONTAINER -->
+				<div class="tabs">
+					<button class="tablinks" onclick="handleTabSwitch('inventory', 0)">Items</button>
+					<button class="tablinks" onclick="handleTabSwitch('equipment', 1)">Equipment</button>
+					<button class="tablinks" onclick="handleTabSwitch('readied', 2)">Ready</button>
+					<button class="tablinks" onclick="handleTabSwitch('commands', 3)">Command-List</button>
+				</div>
+
+
+
+
+				<!--######     TAB CONTENT    ######-->
+
+				<!-- Inventory Content -->
+				<div class="tab-content">
+					<h3>Inventory</h3>
+					<ul id="items">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Equipment Content -->
+				<div class="tab-content">
+					<h3>Equipment</h3>
+					<ul id="equipment">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Readied Content -->
+				<div class="tab-content">
+					<h3>Readied Equipment</h3>
+					<ul id="ready">
+						
+
+					</ul>
+				</div>
+
+
+				<!-- Command-List Content -->
+				<div class="tab-content">
+					<h3>Command-List</h3>
+					<ul>
+						
+						
+					</ul>
+				</div>
+
+				<!--######    END-- TAB CONTENT    ######-->
+
+
+
+
+
+				<!-- <div 
 					class="pics">
 				</div>
 				<div class="inventory box">
@@ -49,29 +118,88 @@
 						<li>inspect</li>
 						<li>take</li>
 					</ul>
-				</div>
-				<form>
-					<input id="command-input" type="text" name="text-input" placeholder="COMMAND...">
-					<input type="submit" name="submit-command" value="Enter">
-				</form>
-			</div>
+				</div> -->
+				
+			</section>
 		</div>
-		<div class="text-button-container">
+
+
+		<!-- <div class="text-button-container">
 			<div 
 				id="contentText">
 			</div>
 			<input 
 				id="nameInput" 
-				onkeypress='submitName(this)' 
+				onkeydown='submitName(this)' 
 				placeholder='Name'
 			>
 			<div 
 				id="buttonContainer">
 			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="data.js"></script>
-	<script type="text/javascript" src="index.js"></script>
+		</div> -->
+
+	</main>
+
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	
+	<!-- <script type="text/javascript" src="../inventory.js"></script> -->
+	<script type="text/javascript" src="combat.js"></script>
+
+
+
+
+
+
+	<!--######    CAUTION! -- Thrown-Together TABBED-MENU SCRIPT    ######-->
+	<script type="text/javascript">
+		
+		//tabs, tabs button, tab-content, .active
+	const handleTabSwitch = function(list, id) {
+
+		//get tabs Array
+		const tabList = document.querySelectorAll('.tabs');
+		const tabArray = Array.from(tabList);
+
+		//get tab-content ?
+		const contentList = document.querySelectorAll('.tab-content');
+		const contentArray = Array.from(contentList);
+
+		//current active index
+		let curIndex = id; // current Index
+
+		
+		if (list === 'inventory') {
+			
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'equipment') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'readied') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+		else if (list === 'commands') {
+
+			for (let i = 0; i < contentArray.length; i++) {
+				contentArray[i].classList.remove('current');
+			}
+			contentArray[curIndex].classList.add('current');
+		}
+
+		console.log('button clicked!')
+	}
+
+	</script>
 </body>
 </html>
