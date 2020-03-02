@@ -124,6 +124,8 @@ let ModelController = (function() {
 
 					text: `You reach for the torch and grab the sominabitch!`,
 
+
+
 				},
 
 				thiccness: {
@@ -146,7 +148,20 @@ let ModelController = (function() {
 
 				}
 
-			}
+			},
+
+			"entryWay": {
+
+				text: ``,
+
+				keysList: [],
+
+				allKeys: {}
+
+
+			},
+
+
 		}
 
 		
@@ -195,6 +210,8 @@ let UIController = (function() {
 	const DOMstrings = {
 		roomImage: '#room-image',
 		textBox: '#text-box',
+		continueBtn: '#continue-text-btn',
+		backBtn: '#back-text-btn',
 		commandForm: '#command-form',
 		commandInput: '#command-input',
 
@@ -254,6 +271,16 @@ let Controller = (function(UICtrl, modelCtrl) {
 
 			enterCommand(command.input);
 		});
+
+		document.querySelector(DOM.backBtn).addEventListener('click', function(e){
+			let roomContent, currentRoom, roomText;
+
+			roomContent = UICtrl.getRoomContent();
+			currentRoom = modelCtrl.getRoomState();
+			roomText = allRooms[currentRoom].text;
+
+			roomContent.textField.innerHTML = roomText;
+		})
 
 
 
