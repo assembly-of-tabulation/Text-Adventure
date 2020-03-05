@@ -1,20 +1,3 @@
-  
-
-
-
-
-// ########################################################
-// DONT REMOVE OR YOU WILL BREAK THE ENTIRE CODEBASE!!!!
-
-
-log = function(a){
-	console.log(a);
-};
-
-// ########################################################
-
-
-
 // ##############################################################################
 // -------------------      DATA / SCENE OBJ     --------------------------------
 // ##############################################################################
@@ -28,10 +11,6 @@ const scene_1__dialogue_2 = ".. Before you get too much time to think, a dark be
 
 
 const DataController = (function() {
-
-	const scene = {
-
-	}
 
 })();
 
@@ -151,10 +130,6 @@ function Monster(name, maxHealth, AC, attackDie, maxTreasure, exp) {
 
 
 
-
-	
-
-
 // ##############################################################################
 // -------------------    UI - CONTROLLER      --------------------------------
 // ##############################################################################
@@ -162,10 +137,6 @@ function Monster(name, maxHealth, AC, attackDie, maxTreasure, exp) {
 const UIController = (function() {
 
 	const test = "This is the UIController speaking to you from the Moon..";
-
-
-
-	
 
 	return {
 
@@ -219,47 +190,9 @@ const Controller = (function(dataCtrl, UICtrl) {
 	}
 
 
-	// const fillMenuList = function(listName) {
-
-	// 	// Get <ul> by id; items, equipment
-	// 	const menuItemsUL = document.getElementById('items');
-	// 	const menuEquipmentUL = document.getElementById('equipment');
-	// 	console.log(menuItemsUL);
 
 
-	// 	// Get Inventory.items.potions object
-	// 	const inventoryItemsPotionsList = Inventory.items.potions;
-	// 	console.log(Object.keys(inventoryItemsPotionsList));
-
-
-	// 	// Acts like jQuery's  empty() method
-	// 	while (menuItemsUL.firstChild) {
-	// 		menuItemsUL.removeChild(menuItemsUL.firstChild);
-	// 	}
-
-
-	// 	// iterating through object keys and values
-	// 	for (let [key, value] of Object.entries(inventoryItemsPotionsList)) {
-	// 		console.log( `${key} : ${value}` );
-
-	// 		// Create <li> element
-	// 		let element_li = document.createElement('li');
-
-	// 		// Create textNode
-	// 		let text = document.createTextNode(`${key}: ${value}`);
-
-	// 		// Add text to li element
-	// 		element_li.appendChild(text);
-
-	// 		// Append li to menu
-	// 		menuItemsUL.appendChild(element_li);
-	// 	}
-	// };
-
-
-
-
-	// Copy function
+	
 	const initMenuList = function(type) {  // items, equipment, or readied
 
 		// get menu-type associated <ul> by ID
@@ -267,21 +200,16 @@ const Controller = (function(dataCtrl, UICtrl) {
 		// loop through item-types and empty lists
 		// repopulate item-types lists one at a time
 
-
-
 		// Get <ul> by id; items, equipment, or readied
 		const menuTypeUL = document.getElementById(type);
-		console.log(menuTypeUL);
-
-
+	
 		// get item-types into array
 		const itemTypeArray = Object.keys(Inventory[type]);
-		log('Item Type Array : ' + itemTypeArray);
-
+		console.log('Item Type Array : ' + itemTypeArray);
 
 		// loop through item-types 
 		for (let i = 0; i < itemTypeArray.length; i++) {
-			log(Inventory[type][itemTypeArray[i]]);
+			console.log(Inventory[type][itemTypeArray[i]]);
 
 			// iterating through object keys and values
 			for (let [key, value] of Object.entries(Inventory[type][itemTypeArray[i]])) {
@@ -301,7 +229,6 @@ const Controller = (function(dataCtrl, UICtrl) {
 			}
 		}
 
-
 		// Get Inventory.items.potions object
 			// const inventoryItemsPotionsList = Inventory.items.potions;
 			// console.log(Object.keys(inventoryItemsPotionsList));
@@ -317,9 +244,6 @@ const Controller = (function(dataCtrl, UICtrl) {
 	initMenuList('items');
 	initMenuList('equipment');
 	initMenuList('ready');
-
-
-
 
 	return {
 		init: function() {

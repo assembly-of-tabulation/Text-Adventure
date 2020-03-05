@@ -1,0 +1,27 @@
+
+torch 
+	USE:
+		-"the sole source of light at the player's disposal; If all torches go out, Death comes."
+
+	FUNCTION
+		-UI flashes yellow and displays torch gif
+
+Spear
+	USE: "weapon for combat"
+
+
+-the moon is shining and shimmering (moon gate)
+-you find a door
+-while hiding, a beast approaches the door
+-the beast opens the door and enters, disappearing into a dark vacuum
+-you hear something terrible behind you
+-you run to the door and find that it's unlocked
+-you open the door and enter, disappearing into another realm
+-you find yourself in a long corridor with a door at the other end
+-you take what you find and walk to the other side of the hall
+-the door is locked
+-you find the key, and enter the next room
+-a stone room with a book laying on an altar
+-
+-
+-
